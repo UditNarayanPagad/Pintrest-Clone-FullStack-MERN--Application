@@ -1,0 +1,35 @@
+<% include ./partials/header.ejs %>
+<div class="w-full h-screen bg-zinc-800 text-white flex items-center flex-col p-4">
+   <div class="profile flex items-center flex-col">
+    <form action="/fileupload" hidden id="uploadForm" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+    </form>
+    <div class="relative">
+        <div class="w-20 h-20 relative bg-zinc-200 rounded-full overflow-hidden object-cover object-center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3qSNRCUSG6NFDY0vk9ok7n1-d0UYWcJkyYQ&usqp=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" alt="">
+        </div>
+        <span id="uploadSpan" class="absolute bottom-0 right-0 w-6 h-6 cursor-pointer bg-zinc-100 rounded-full flex justify-center items-center">
+            <i class="fa-regular fa-pen-to-square text-zinc-800 text-sm"></i>
+        </span>
+    </div>
+    <h1 class="text-xl font-semibold">User Name</h1>
+    <h3 class="text-regular text-zinc-300">@username</h3>
+    <a href="/edit" class="py-1 px-4 mt-2 inline-block bg-zinc-600 rounded-full">Edit</a>
+    <button class="px-8 py-2 m-4 bg-red-600 text-white font-semibold text-sm rounded-lg">Add New Post</button>
+   </div>
+   <div class="flex flex-wrap w-full text-white pt-4">
+    <div class="m-4">
+        <div class="w-40 h-28 bg-zinc-200 rounded-md overflow-hidden"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhDlb8_dDybPVz80tdcOUnH5QZqtM4zC7Eew&usqp=CAU" alt=""></div>
+        <h1 class="text-lg">All Pins</h1>
+        <p class="text-xs text-zinc-400">28 pins</p>
+    </div>
+   </div>
+</div>
+<script>
+    document.querySelector("#uploadSpan").addEventListener("click",function(){
+        document.querySelector("#uploadForm input").click();
+    })
+    document.querySelector("#uploadForm input").addEventListener("change",function(){
+        document.querySelector("#uploadForm").submit();
+    })
+</script>
+<% include ./partials/footer.ejs %>

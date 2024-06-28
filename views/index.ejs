@@ -1,0 +1,19 @@
+<% include ./partials/header.ejs %>
+
+    <div class="w-full h-screen bg-[url('https://img.freepik.com/free-vector/abstract-colorful-technology-dotted-wave-background_1035-17450.jpg')] bg-cover bg-center bg-no-repeat flex items-center justify-center">
+        <div class="w-80 h-[66vh] bg-white rounded-[25px] p-8 pt-4 text-center shadow-md">
+            <div class="h-10 w-10 bg-red-500 text-white rounded-[50%] text-center ml-[45%] mb-2"><img src="https://i.pinimg.com/1200x/f0/6f/a1/f06fa135a89bb69a4e9eb1f12544a1de.jpg" alt=""></div>
+            <h1 class="text-2xl leading-none font-semibold capitalize mb-4">Welcome to Pintrest</h1>
+            <form action="/login" method="post">
+                <input class="border-2 rounded-md block mt-2 w-full p-2" type="text" name="username" placeholder="Username">
+                <input class="border-2 rounded-md block mt-2 w-full p-2" type="password" name="password" placeholder="Password">
+                <a href="#" class="text-zinc-600 font-semibold">Forgotten password ?</a>
+                <input class="border-2 cursor-pointer block mt-2 w-full p-2 bg-red-500 text-white rounded-full" type="submit" name="submit" value="login">
+                <p class="text-zinc-600 text-[13px]">By continuing, you agree to Pinterest's <a href="#"><strong class="text-black">Terms of Service</strong></a> and acknowledge that you've read our <a href="#"><strong class="text-black">Privacy Policy. Notice at collection.</strong></a>
+                </p>
+            </form>
+            <a href="/register" class="text-zinc-600 text-sm font-semibold mt-2 inline-block">Dont have an account? Create account</a>
+        </div>
+    </div>
+
+<% include ./partials/footer.ejs %>
